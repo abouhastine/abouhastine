@@ -15,6 +15,6 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github-username: abouhastine
-          user-email: aymen.bouhastine@gmail.com
+          github-username: 'abouhastine'
+          user-email: 'aymen.bouhastine@gmail.com'
 
