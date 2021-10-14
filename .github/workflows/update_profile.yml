@@ -1,5 +1,8 @@
 name: Update GitHub Profile Page
-on: [push]
+on: 
+  push:
+  schedule:
+      - cron: "0 */1 * * *"
 
 jobs:
   gadpp_job:
