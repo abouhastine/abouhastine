@@ -1,20 +1,30 @@
-name: Update GitHub Profile Page
-on: [push]
+name: Update README
+
+on:
+  push:
+  schedule:
+    - cron: "0 */1 * * *"
 
 jobs:
-  gadpp_job:
+  markscribe:
     runs-on: ubuntu-latest
-    name: Update GitHub Profile Page
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: GADPP
-        uses: umutphp/github-action-dynamic-profile-page@v2
-        id: gadpp
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          GITHUB_TOKEN: ${{ secrets.admin_token }}
-        with:
-          github-username: 'abouhastine'
-          user-email: 'aymen.bouhastine@gmail.com'
 
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: muesli/readme-scribe@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        with:
+          template: "templates/README.md.tpl"
+          writeTo: "README.md"
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: Update generated README
+          branch: master
+          commit_user_name: readme-scribe 🤖
+          commit_user_email: actions@github.com
+          commit_author: readme-scribe 🤖 <actions@github.com>
