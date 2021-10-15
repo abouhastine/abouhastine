@@ -21,6 +21,3 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abouhastine&show_icons=true&locale=en&layout=compact" alt="abouhastine" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abouhastine&show_icons=true&locale=en" alt="abouhastine" /></p>
-
-<!-- START gadpp -->
-- abouhastine/abouhastine, [refs/heads/master@cf92334229957c5c4749a1c15dbc242c33c61ab7](https://github.com/abouhastine/abouhastine/commit/cf92334229957c5c4749a1c15dbc242c33c61ab7)
